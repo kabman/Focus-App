@@ -1,0 +1,24 @@
+{
+    "manifest_version" : 2,
+    "name" : "The focus tool",
+    "version" : "1.0",
+    "description" : "A little productivity tool to help avoid time-sinks.",
+    "content_scripts": [
+        {
+            "matches" : ["https://www.youtube.com/*"],
+            "js" : ["jquery.min.js","./youtube.js"]
+        },
+        {
+            "matches" : ["https://www.reddit.com/*"],
+            "js" : ["jquery.min.js","./reddit.js"]
+        }
+
+    ],
+    "browser_action":{
+        "browser_style": true,
+  	    "default_title": "Focus",
+        "default icon":"fcs.png",
+        "default_popup": "popup.html"
+    }
+
+}
